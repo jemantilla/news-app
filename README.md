@@ -1,6 +1,6 @@
 # news-app
 
-##Getting Started 
+## Getting Started 
 ```
 npm run build
 npm run ios // run using ios simulator
