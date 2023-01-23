@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^4.6.2",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.2",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "^4.6.2",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/react": "^6.0.0",
@@ -46,6 +48,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "ios": "ionic capacitor build ios",
+    "ios:live": "ionic capacitor copy ios && ionic capacitor run ios -l --external",
+    "android": "ionic capacitor build android",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
     "eject": "react-scripts eject"
   },
