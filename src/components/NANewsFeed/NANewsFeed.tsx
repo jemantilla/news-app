@@ -40,7 +40,7 @@ export const NANewsFeed = () => {
       );
     } catch (errorUnknown) {
       const error = errorUnknown as any;
-      setError(error);
+      setError(error.message || error);
     }
   };
 
@@ -103,7 +103,7 @@ export const NANewsFeed = () => {
             setSearchQuery(value);
             getAllNews(value);
           }}
-          placeholder="Search for a country"
+          placeholder="What's news?"
         />
       </div>
       <NAToaster
