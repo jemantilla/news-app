@@ -1,0 +1,22 @@
+@import "../../theme/shared.scss";
+.ca-toaster {
+  z-index: 9999999;
+  --height: auto;
+  --width: 100%;
+  --start: 0;
+  --border-radius: 32px;
+  top: calc(var(--ion-safe-area-bottom) + 40px);
+  position: fixed !important;
+
+  &::part(container) {
+    align-items: flex-start !important;
+    padding: 25px 17px;
+  }
+  &::part(message) {
+    font-size: $naH3FontSize !important;
+    font-weight: $naH3FontWeight !important;
+    line-height: $naH3LineHeight !important;
+    color: var(--ion-color-white) !important;
+    padding-bottom: 40px;
+  }
+}
