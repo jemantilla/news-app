@@ -1,22 +1,34 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+
+import "./Home.scss";
+import { NANewsFeed } from "../components/NANewsFeed/NANewsFeed";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+      <IonContent className="home-content" scrollY={false} fullscreen>
+        <IonHeader
+          className="home-header ion-vertical-padding"
+          collapse="condense"
+        >
+          <IonToolbar className="home-toolbar">
+            <IonTitle
+              className="home-title na-h1 primary ion-no-padding ion-text-start"
+              slot="start"
+            >
+              On World News
+            </IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <div className="home-content-main">
+          <NANewsFeed />
+        </div>
       </IonContent>
     </IonPage>
   );
