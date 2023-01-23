@@ -1,14 +1,13 @@
 import {
   IonContent,
-  IonFooter,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { NANewsFeed } from "../components/NANewsFeed/NANewsFeed";
 
 import "./Home.scss";
+import { NANewsFeed } from "../components/NANewsFeed/NANewsFeed";
 
 const Home: React.FC = () => {
   return (
